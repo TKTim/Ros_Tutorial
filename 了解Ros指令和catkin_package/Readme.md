@@ -16,7 +16,7 @@ $ roscd <PackageName>
 ### 實驗：
 > 先使用reospack查詢 "roscpp"的位置，不使用cd而是使用roscd移動到目錄下。
 
-![img](/01.png)
+![img](https://github.com/TKTim/Ros_Tutorial/blob/master/%E4%BA%86%E8%A7%A3Ros%E6%8C%87%E4%BB%A4%E5%92%8Ccatkin_package/01.png)
 
 >！！！但是要記住的是使用這些方法查詢的package一定要是在ROS_PACKAGE_PATH中的。
 
