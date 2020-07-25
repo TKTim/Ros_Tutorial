@@ -59,7 +59,7 @@ $ rosrun [package_name] [node_name]  (不要輸入這行)
 
 $ rosrun turtlesim turtlesim_node
 ```
-![img]()
+![img](https://github.com/TKTim/Ros_Tutorial/blob/master/%E4%BA%86%E8%A7%A3Node_in_Ros/03.png)
 
 
 ### 4. 回到rosnode的終端機
