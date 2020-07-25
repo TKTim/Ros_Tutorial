@@ -14,6 +14,7 @@ roscore
 #### **開新終端機** 
 ```
 rosrun turtlesim turtlesim_node
+開啟烏龜程式
 ```
 #### **開新終端機** 
 ```
@@ -25,7 +26,7 @@ rosrun turtlesim turtle_teleop_key
 rosrun rqt_graph rqt_graph
 圖形化
 ```
-![img]()
+![img](https://github.com/TKTim/Ros_Tutorial/blob/master/%E5%9C%96%E5%BD%A2%E5%8C%96Node%E9%97%9C%E4%BF%82/1.png)
 >由上可知，各Node的傳輸路徑
 
 
@@ -33,5 +34,5 @@ rosrun rqt_graph rqt_graph
 ```
 rostopic echo /turtle1/cmd_vel 
 ```
-![img]()
+![img](https://github.com/TKTim/Ros_Tutorial/blob/master/%E5%9C%96%E5%BD%A2%E5%8C%96Node%E9%97%9C%E4%BF%82/2.png)
 >由於多了一個echo做偵測，因此傳輸多了一條topic。
