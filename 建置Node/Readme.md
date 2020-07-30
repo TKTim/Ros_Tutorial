@@ -1,7 +1,7 @@
 建置Node
 =
 
-還記得我們在[了解Ros指令和catkin_package]()時，我們建立了自己的catkin工作環境，也建立了引用 **std_msgs** 、**rospy**、 **roscpp**的pkg。 現在我們就要利用 **rospy** 來寫一個簡單的應用程式。
+還記得我們在[了解Ros指令和catkin_package]()時，我們建立了自己的catkin工作環境，也建立了引用 **std_msgs** 、**rospy**、 **roscpp**的pkg。 現在我們就要利用 **rospy** 來寫一個簡單的應用程式。[參考網站](http://wiki.ros.org/rospy_tutorials/Tutorials/WritingPublisherSubscriber)
 
 1. 下載talker .py
 
@@ -13,14 +13,8 @@ $ wget https://raw.github.com/ros/ros_tutorials/kinetic-devel/rospy_tutorials/00
 $ chmod +x talker.py
 ```
 
-2. 將以下程式碼放入 CMakeLists.txt
-```
-catkin_install_python(PROGRAMS scripts/talker.py
-  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
-)
-```
 
-3. 解析talker. py
+2. 解析talker. py
 
    ```
    1 #!/usr/bin/env python   //使用python
@@ -37,23 +31,23 @@ catkin_install_python(PROGRAMS scripts/talker.py
    ```
 
    ```
-   8     rospy.init_node('talker', anonymous=True)
+   8 rospy.init_node('talker', anonymous=True)
    //初始化名為 "talker"的node，anonymous=True 通過在NAME的末尾添加隨機數來確保您的節點具有唯一名稱。
-   9     rate = rospy.Rate(10) # 10hz
+   9 rate = rospy.Rate(10) # 10hz
    //每秒經過10次循環
-   10     while not rospy.is_shutdown():
-   11         hello_str = "hello world %s" % rospy.get_time()
+   10 while not rospy.is_shutdown():
+   11 hello_str = "hello world %s" % rospy.get_time()
    //輸出字串(hello + time)
    ```
    ```
-   12         rospy.loginfo(hello_str)
+   12 rospy.loginfo(hello_str)
    //loginfo() 做三件事
      1.打印到屏幕上。
      2.被寫入節點的日誌文件，也就是node。
      3.並被寫入rosout。 rosout是一個方便的調試工具，之後會說到。
    
-   13         pub.publish(hello_str)
-   14         rate.sleep()
+   13 pub.publish(hello_str)
+   14 rate.sleep()
    15 
    ```
    ```
@@ -64,21 +58,15 @@ catkin_install_python(PROGRAMS scripts/talker.py
    20         pass
    //用意為，若是程式遭到Ctrl+c或強制關閉，便會停止再次運行talker。
 
-4.下載 listener. py
+3. 下載 listener. py
 ```
 $ roscd beginner_tutorials/scripts/
 $ wget https://raw.github.com/ros/ros_tutorials/kinetic-devel/rospy_tutorials/001_talker_listener/listener.py
 $ chmod +x listener.py
 ```
 
-5. 將以下程式碼在 CMakeLists.txt 更改
-```
-catkin_install_python(PROGRAMS scripts/talker.py scripts/listener.py
-  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
-)
-```
 
-6. 解析 listener. py
+4. 解析 listener. py
 
 ```
    1 #!/usr/bin/env python
@@ -86,7 +74,7 @@ catkin_install_python(PROGRAMS scripts/talker.py scripts/listener.py
    3 from std_msgs.msg import String
    4 
    5 def callback(data):
-   6     rospy.loginfo(rospy.get_caller_id() + "I heard %s", data.data)
+   6 rospy.loginfo(rospy.get_caller_id() + "I heard %s", data.data)
    7     
    8 def listener():
    9 
@@ -109,3 +97,6 @@ catkin_install_python(PROGRAMS scripts/talker.py scripts/listener.py
 
 我把實驗結果錄了下來
 可以到[這裡](https://www.youtube.com/watch?v=x2IFQINL8tM)看看
+
+---
+參考網站 --- http://wiki.ros.org/rospy_tutorials/Tutorials/WritingPublisherSubscriber
