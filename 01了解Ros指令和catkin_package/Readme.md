@@ -93,11 +93,11 @@ $ rospack depends beginner_tutorials
 
 >另外如果遇到比較細節的package.xml問題了話，建議你花點時間細看[官方網站](http://wiki.ros.org/ROS/Tutorials/CreatingPackage)第6點的部份。
 
+---
+## 參考網站
 
-### 參考網站
-
-##### http://wiki.ros.org/ROS/Tutorials/NavigatingTheFilesystem
-##### http://wiki.ros.org/ROS/Tutorials/CreatingPackage
+ http://wiki.ros.org/ROS/Tutorials/NavigatingTheFilesystem
+ http://wiki.ros.org/ROS/Tutorials/CreatingPackage
 
 
 

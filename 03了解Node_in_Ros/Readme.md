@@ -96,7 +96,7 @@ $ rosrun turtlesim turtlesim_node __name:=my_turtle
 ```
 >輸入後Node的名稱會變成 my_turtle，若想將程序停止，只需要Ctrl+c。
 
+---
+## 參考網站
 
-### 參考網站
-
-##### http://wiki.ros.org/ROS/Tutorials/UnderstandingNodes
+http://wiki.ros.org/ROS/Tutorials/UnderstandingNodes

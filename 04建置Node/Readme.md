@@ -94,9 +94,18 @@ $ chmod +x listener.py
   22 if __name__ == '__main__':
   23     listener()
 ```
+>接下來 運行
+```
+New Console
+# rosrun beginner_tutorials talker.py
+New Console
+# rosrun beginner_tutorials talker.py
+```
+
 
 我把實驗結果錄了下來
 可以到[這裡](https://www.youtube.com/watch?v=x2IFQINL8tM)看看
 
 ---
-參考網站 --- http://wiki.ros.org/rospy_tutorials/Tutorials/WritingPublisherSubscriber
+## 參考網站 
+http://wiki.ros.org/rospy_tutorials/Tutorials/WritingPublisherSubscriber

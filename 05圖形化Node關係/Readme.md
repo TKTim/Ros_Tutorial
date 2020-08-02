@@ -36,3 +36,6 @@ rostopic echo /turtle1/cmd_vel
 ```
 ![img](https://github.com/TKTim/Ros_Tutorial/blob/master/%E5%9C%96%E5%BD%A2%E5%8C%96Node%E9%97%9C%E4%BF%82/2.png)
 >由於多了一個echo做偵測，因此傳輸多了一條topic。
+---
+## 參考網址
+http://wiki.ros.org/ROS/Tutorials/UnderstandingTopics
